@@ -1,22 +1,4 @@
-"""
-Brain Tumor MRI Classification - Training Script
-------------------------------------------------
-Transfer learning with EfficientNetB0 (ImageNet weights), two-phase training:
-  Phase 1: train only the new classification head (base frozen)
-  Phase 2: fine-tune the top layers of the base with a very low learning rate
 
-Works with any dataset laid out as one folder per class, e.g.
-
-  Option A (Kaggle "Brain Tumor MRI Dataset" style):
-    dataset/Training/{glioma,meningioma,notumor,pituitary}/*.jpg
-    dataset/Testing/{glioma,meningioma,notumor,pituitary}/*.jpg
-
-  Option B (single folder, we split 70/15/15 for you):
-    dataset/{yes,no}/*.jpg     (or any class folder names)
-
-Usage:
-    python train.py --data_dir path/to/dataset
-"""
 
 import argparse
 import json
